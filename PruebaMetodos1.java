@@ -12,23 +12,7 @@ import java.util.Scanner;
  */
 public class PruebaMetodos1 {
 
-    public static void main(String[] args) {
 
-        double[] matriz = new double[5];
-        for (int i = 0; i < matriz.length; i++) {
-            matriz[i] = (int) ((Math.random() * 9) + 1);
-        }
-
-//        mostrarArrayPantalla2(matriz);
-//        obtenerArrayComoString(matriz);
-//        completarArray3(matriz);
-//        System.out.println(obtenerSumaArray(matriz));
-//        mostrarArrayPantalla2(arrayPotencias2(matriz));
-    //    System.out.println(arrayCadenasConcatenadas);
-       System.out.println(obtenerSumaLongCadArray());
-//        obtenerArrayComoString(obtenerLongCadenas());
-        // obtenerArrCad5Vocales();
-    }
 
 //    Escribe un método, de nombre mostrarArrayPantalla2, que reciba por
 //    parámetro un array de enteros y muestre sus valores por pantalla
@@ -43,7 +27,7 @@ public class PruebaMetodos1 {
     //    Escribe un método, de nombre obtenerArrayComoString, que reciba
 //    un array de enteros por parámetro y devuelva una cadena de
 //    caracteres con su contenido.
-    public static void obtenerArrayComoString(int[] matriz) {
+    public static void obtenerArrayComoString(String[] matriz) {
 
         System.out.println(Arrays.toString(matriz));
 
@@ -141,19 +125,74 @@ public class PruebaMetodos1 {
 //    parámetro un array de cadenas y devuelva un array con las que
 //    contengan las 5 vocales. Para la consideración de un carácter como
 //    vocal no se tendrá en cuenta si está en mayúsculas o minúsculas
-    // public static int[] obtenerArrCad5Vocales() {
-    //     Scanner teclado = new Scanner(System.in);
+    public static String[] obtenerArrCad5Vocales() {
+        Scanner teclado = new Scanner(System.in);
 
-    //     System.out.println("Introduce una cadena de caracteres ");
-    //     String[] matrizCadena = new String[5];
-    //     for (int i = 0; i < matrizCadena.length; i++) {
-    //         matrizCadena[i] = teclado.nextLine();
-    //     }
-    //     for (int i = 0; i < matrizCadena.length; i++) {
-    //         if (matrizCadena[i].contains('a')) {
-    //         if (matrizCadena[i].contains()) {
-                
-    //         }
-    //     }
-    // }
+        System.out.println("Introduce una cadena de caracteres ");
+        String[] matrizCadena = new String[5];
+        for (int i = 0; i < matrizCadena.length; i++) {
+            matrizCadena[i] = teclado.nextLine();
+        }
+
+        int contador = 0;
+        int k = 0;
+        String[] aux = new String[matrizCadena.length];
+        for (int i = 0; i < matrizCadena.length; i++) {
+            if (matrizCadena[i].toLowerCase().contains("a")
+                    && matrizCadena[i].toLowerCase().contains("e")
+                    && matrizCadena[i].toLowerCase().contains("i")
+                    && matrizCadena[i].toLowerCase().contains("o")
+                    && matrizCadena[i].toLowerCase().contains("u")) {
+                aux[k++] = matrizCadena[i];
+                contador++;
+            }
+        }
+
+        String[] vocales = new String[contador];
+
+        for (int i = 0; i < contador; i++) {
+            vocales[i] = aux[i];
+        }
+
+        return vocales;
+    }
+    
+    
+//    Escribe un método, de nombre obtenerArrayOrdAlfab, que reciba por
+//    parámetro un array de cadenas de caracteres y las ordene alfabéticamente.
+//    La ordenación no se verá afectada por la expresión de los caracteres
+//    expresados en mayúsculas o minúsculas. Es decir, las cadenas “ALBACETE”, 
+//    “antonio”, y “BURGOS” quedarán ordenadas en este mismo orden.
+    
+    public static void obtenerArrayOrdAlfab(){
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Introduce una cadena de caracteres ");
+        String[] matrizCadena = new String[5];
+        for (int i = 0; i < matrizCadena.length; i++) {
+            matrizCadena[i] = teclado.nextLine();
+        }
+        Arrays.sort(matrizCadena);
+    }
+    
+    
+    
+        public static void main(String[] args) {
+
+        double[] matriz = new double[5];
+        for (int i = 0; i < matriz.length; i++) {
+            matriz[i] = (int) ((Math.random() * 9) + 1);
+        }
+
+//        mostrarArrayPantalla2(matriz);
+//        obtenerArrayComoString(matriz);
+//        completarArray3(matriz);
+//        System.out.println(obtenerSumaArray(matriz));
+//        mostrarArrayPantalla2(arrayPotencias2(matriz));
+//        System.out.println(arrayCadenasConcatenadas);
+//        System.out.println(obtenerSumaLongCadArray());
+//        obtenerArrayComoString(obtenerLongCadenas());
+//        obtenerArrayComoString(obtenerArrCad5Vocales());
+//        obtenerArrayOrdAlfab();
+    }
 }
