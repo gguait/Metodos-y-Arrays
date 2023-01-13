@@ -43,7 +43,7 @@ public class PruebaMetodos2 {
     }
     
     public static void main(String[] args) {
-//        mostrarArrayPantalla(rellenarMatrizSecuencia2D());
+//        mostrarArrayPantalla(rellenarMatrizSecuencia2D());a
         
     }
 }
