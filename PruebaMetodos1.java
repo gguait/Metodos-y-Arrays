@@ -175,14 +175,6 @@ public class PruebaMetodos1 {
         Arrays.sort(matrizCadena);
     }
     
-    
-    
-        public static void main(String[] args) {
-
-        double[] matriz = new double[5];
-        for (int i = 0; i < matriz.length; i++) {
-            matriz[i] = (int) ((Math.random() * 9) + 1);
-        }
 
 //        mostrarArrayPantalla2(matriz);
 //        obtenerArrayComoString(matriz);
@@ -193,6 +185,5 @@ public class PruebaMetodos1 {
 //        System.out.println(obtenerSumaLongCadArray());
 //        obtenerArrayComoString(obtenerLongCadenas());
 //        obtenerArrayComoString(obtenerArrCad5Vocales());
-//        obtenerArrayOrdAlfab();
+       obtenerArrayOrdAlfab();
     }
-}
